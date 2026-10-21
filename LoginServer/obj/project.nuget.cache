@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CpvJd0wBHIY=",
+  "dgSpecHash": "kORWRwHGJcY=",
   "success": true,
   "projectFilePath": "C:\\Users\\plmkn\\Desktop\\School\\Project\\BallBounce_NetCore\\LoginServer\\GameServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\plmkn\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.13\\microsoft.aspnetcore.openapi.10.0.13.nupkg.sha512",
-    "C:\\Users\\plmkn\\.nuget\\packages\\microsoft.openapi\\2.12.2\\microsoft.openapi.2.12.2.nupkg.sha512"
+    "C:\\Users\\plmkn\\.nuget\\packages\\microsoft.openapi\\2.12.2\\microsoft.openapi.2.12.2.nupkg.sha512",
+    "C:\\Users\\plmkn\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.3.1\\swashbuckle.aspnetcore.swaggerui.10.3.1.nupkg.sha512"
   ],
   "logs": []
 }
