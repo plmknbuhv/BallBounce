@@ -9,11 +9,15 @@ public class AppDbContext : DbContext
     {
     }
 
-    /// <summary>users 테이블. LINQ 쿼리의 시작점.</summary>
+    // DbSet<User> => User 데이터를 조회하거나 추가, 삭제하는 작업에 사용하는 객체의 타입
+    // Set<User>() => DbContext에 정의된 메서드, User 데이터들을 관리할 수 있는 DbSet<User> 객체를 반환
     public DbSet<User> Users => Set<User>();
 
-    //이건 스키마 설계도야. 마이그레이션 시점에서 읽어서 설계도대로 만들어. 근데 마이그레이션을 읽을때 설계도가 변경되었다면 마이그레이션을 바꿔
-    //뿐만 아니라 런타임에서 Linq를 SQL로 번역할때도 여기서 넘어온 설계도를 참조해
+
+    // modelBuilder => 테이블·컬럼·인덱스 등의 매핑 규칙을 설정하는 객체
+    // Entity<User>() => 엔티티의 매핑 규칙을 설정할 데이터를 User로 정함
+    // HasIndex(u => u.Username) => Username에 검색을 효율적으로 수행하도록 돕는 인덱스를 설정
+    // IsUnique() => Username 인덱스를 고유 인덱스로 설정해서, DB에 적용되면 같은 Username의 중복 저장을 막음
     // OnModelCreating은 EF Core가 모델을 구성할 때 호출되는 메서드로, 엔티티의 속성, 관계, 인덱스 등을 정의할 수 있다.
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
