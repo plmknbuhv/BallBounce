@@ -1,4 +1,4 @@
-using GameServer.Data;
+    using GameServer.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);  // 서버의 설정과 기능을 준비할 객체를 생성
